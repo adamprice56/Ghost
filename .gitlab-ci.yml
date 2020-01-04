@@ -8,10 +8,9 @@ before_script:
   - docker login -u gitlab-ci-token -p "$CI_BUILD_TOKEN" "$CI_REGISTRY"
 
 development:
-  stage: deploy
+  stage: build
   script:
-    - docker build -t "$CI_REGISTRY_IMAGE:latest" .
-    - docker push "$CI_REGISTRY_IMAGE:latest"
+    - docker build -t "ghost-itmcr:latest" .
   only:
     - master
 
