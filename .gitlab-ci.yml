@@ -10,7 +10,7 @@ before_script:
 development:
   stage: build
   before_script:
-    - docker -v
+    - echo "172.17.0.1 docker" >> /etc/hosts
   script:
     - docker build -t "ghost-itmcr:latest" .
   only:
