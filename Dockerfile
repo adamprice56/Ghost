@@ -10,9 +10,9 @@ FROM node
 # Install Ghost
 RUN \
   cd /tmp && \
-  wget https://ghost.org/zip/ghost-latest.zip && \
-  unzip ghost-latest.zip -d /ghost && \
-  rm -f ghost-latest.zip && \
+  wget https://gitlab.com/adamprice56/Ghost/-/archive/master/Ghost-master.zip && \
+  unzip Ghost-master.zip -d /ghost && \
+  rm -f Ghost-master.zip && \
   cd /ghost && \
   npm install --production && \
   #sed 's/127.0.0.1/0.0.0.0/' /ghost/config.example.js > /ghost/config.js && \
